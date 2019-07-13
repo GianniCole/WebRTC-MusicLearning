@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Music Learning</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <!-- script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script-->
+  <script src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+ 
+
+<!-- Documentation extras -->
+
+<link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet">
+
+  <!-- codice jQuery -->
+  <script type="text/javascript" src="CheckLogin.js"></script>
+  
+    <!-- Bootstrap core CSS -->
+    <link href="index.css" rel="stylesheet">
+
+  
+	
+</head>
+
+
+
+<body background="img/background.jpg">
+
+<div class="container"><!-- style="margin-top: 5%;">-->
+  <div class="row">
+    <div class="col-sm-4"> </div>
+	<div class="col-md-4">
+ 		<h1 class="text-center text-success"> Benvenuti </h1>
+ 
+   		<img class="img-fluid" src="img/title.png" alt="Title" width="460" height="92"> 
+
+  		<img class="img-fluid" src="img/music_note.png" alt="NotaMusicale" width="460" height="345"> 
+																
+
+		<div class="col-sm-12">
+
+  			<ul class="nav nav-pills" >
+  				<br/>
+
+				<hr class="mb-4">
+
+    			<li class="active" style="width:50%"><a class="btn btn-lg btn-default" data-toggle="tab" href="#menuProfessore">Professore</a></li>
+   
+    			<li class="" style="width:48%"><a class=" btn btn-lg btn-default" data-toggle="tab" href="#menuAllievo">Allievo</a></li>
+
+  			</ul>
+
+			<hr class="mb-4">
+
+
+
+  			<div class="tab-content" name="tab">
+    		<div id="menuProfessore"  class="tab-pane fade in active">
+      
+			<form method="post" action="Professor" name="formProf">
+ 
+  
+			<div class="form-group">
+			    <label for="username">Nome Professore</label>
+			    <input type="text" class="form-control" id="ProfName" placeholder="Inserisci Nome" name="ProfName" required>
+				<div class="valid-feedback">Valid.</div>
+				<div class="invalid-feedback"> Siete pregati di compilare il campo nome.</div>
+			</div>
+  
+  
+  
+			 <div class="form-group">
+			    <label for="email">Indirizzo email:</label>
+			    <input type="email" class="form-control"  placeholder="Inserisci email" id="email" name="ProfEmail" required>
+				<div class="invalid-feedback">
+			        E' richiesto un indirizzo email valido.
+			     </div>
+			 </div>
+
+
+			<div class="input-group mb-3">
+			  <div class="input-group-prepend">
+			    <label class="input-group-text" for="instrument">Strumento</label>
+			  </div>
+			  <select class="form-control" id="instrument" required name="Instrument">
+			
+			    <option value>Seleziona...</option>
+			    <option value="tromba">Tromba</option>
+			    <option value="pianoforte">Pianoforte</option>
+			    <option value="batteria">Batteria</option>
+			    <option value="chitarra">Chitarra</option>
+			  </select>
+			</div>
+
+			<div class="input-group mb-3">
+			  <div class="input-group-prepend">
+			    <label class="input-group-text" for="difficoult">Difficoltà</label>
+			  </div>
+			  <select class="form-control" id="difficoult" required name="Level">
+			
+			    <option value>Seleziona...</option>
+			    <option value="Base">Base</option>
+			    <option value="Intermedia">Intermedia</option>
+			    <option value="Avanzata">Avanzata</option>
+			  </select>
+			</div>
+
+<br/>
+
+<br/>
+
+
+
+
+
+  <button type="submit" class="btn btn-block btn-success">Login</button>
+
+</form>
+<br/>
+
+
+
+    </div>
+
+    <div id="menuAllievo" class="tab-pane fade">
+
+<form method="post" action="Student" class="needs-validation" novalidate>
+
+  <div class="form-group">
+    <label for="name">Nome allievo</label>
+    <input type="text" class="form-control" id="name" placeholder="Inserisci Nome" name="StudentName" required>
+	<div class="valid-feedback">Valid.</div>
+	<div class="invalid-feedback"> Siete pregati di compilare il campo nome.</div>
+  </div>
+  
+<!--    <div class="form-group">
+    <label for="surname">Cognome allievo</label>
+    <input type="text" class="form-control" id="surname" placeholder="Inserisci cognome" name="uname" required>
+	<div class="valid-feedback">Valid.</div>
+	<div class="invalid-feedback"> Siete pregati di compilare il campo cognome.</div>
+  </div> -->
+ 
+ 
+  <div class="form-group">
+    <label for="email">Indirizzo email:</label>
+    <input type="email" class="form-control" id="email" placeholder="Inserisci indirizzo email" name="StudentEmail" required>
+	<div class="valid-feedback">Valid.</div>
+	<div class="invalid-feedback"> Inserire una mail valida</div>
+
+	</div>
+
+
+
+<hr class="mb-4">
+
+
+	<div class="custom-control custom-checkbox">
+	  <input type="checkbox" class="custom-control-input" id="accept-info" required >
+	  <label class="custom-control-label" for="accept-info">Autorizzo il trattamento dei dati personali</label>
+	  <div class="invalid-feedback">Accettare il trattamento ai dati personali per poter continue.</div>
+	</div>
+<hr class="mb-4">
+
+
+  <button type="submit" class="btn btn-block btn-success">Login</button>
+
+</form>
+<br/>
+    
+
+
+
+    </div>
+
+	
+   </div>
+  </div>
+</div>
+</div>
+</div>
+
+</body>
+</html>
